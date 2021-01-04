@@ -1,0 +1,15 @@
+{
+  "name": "weddinginvite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "watch-scss": "sass --watch scss:css --style=compressed"
+  },
+  "keywords": [],
+  "author": "Vipin Mishra",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.32.0"
+  }
+}
