@@ -109,8 +109,8 @@ body {
     .date {
       display: inline-block;
       margin-bottom: 1rem;
-      font-weight: 700;
-      font-size: 1rem;
+      font-weight: 600;
+      font-size: 1.125rem;
       color: var(--red);
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -126,7 +126,7 @@ body {
         display: block;
 
         &.joiner {
-          --size: 150px;
+          --size: 180px;
           background-color: #ffe0de;
           height: var(--size);
           width: var(--size);
@@ -141,12 +141,12 @@ body {
           transform: translateY(-50%) translateX(-50%);
           left: 50%;
           z-index: -1;
-          font-size: 7rem;
+          font-size: 9rem;
         }
 
         &.groom-name,
         &.bride-name {
-          font-size: 5rem;
+          font-size: 6rem;
           color: var(--text-dark);
           line-height: 0.9;
           transform: rotate(-9deg);
@@ -158,9 +158,35 @@ body {
       font-family: var(--font-decorative);
       font-weight: 700;
       font-size: 2rem;
-      // color: var(--red);
       display: inline-block;
       margin-top: 1rem;
+    }
+  }
+
+  .image {
+    --width: 300px;
+    max-width: var(--width);
+    margin: 5rem auto 0;
+    position: relative;
+    z-index: 1;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+
+    img {
+      border-radius: 3px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border-radius: 3px;
+      background-color: var(--red);
+      transform: rotate(6deg);
+      z-index: -1;
     }
   }
 }
@@ -172,6 +198,9 @@ body {
   text-align: center;
 
   .celebrate-title {
+    font-weight: 700;
+    line-height: 1.4;
+    font-size: 1.5rem;
     span {
       display: block;
     }
@@ -197,6 +226,7 @@ body {
       }
 
       .event-title {
+        font-size: 1.125rem;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -216,13 +246,20 @@ body {
 
       .event-timing {
         font-weight: 600;
-        color: var(--text-dark);
       }
     }
   }
 
   .event-venue {
     margin-top: 1.5rem;
+
+    .styled-heading {
+      font-size: 1.125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-dark);
+    }
 
     .venue-details {
       margin: 1rem 0;
@@ -255,7 +292,7 @@ body {
       max-width: 600px;
       height: 500px;
       overflow: hidden;
-      margin-top: 2rem;
+      margin: 2rem auto 0;
     }
   }
 }
@@ -777,6 +814,8 @@ body {
   overflow: hidden;
   position: relative;
   width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .video-container::after {
@@ -864,5 +903,133 @@ body {
         fill: #fff;
       }
     }
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .hero {
+    padding: 10rem 0 8rem;
+  }
+
+  .hero-inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .image {
+      margin: 0 0;
+    }
+  }
+
+  .animated-confetti {
+    width: 250px;
+  }
+
+  .celebrate {
+    .celebrate-title {
+      font-size: 2rem;
+    }
+
+    .events-wrapper {
+      .event-item {
+        .event-title {
+          font-size: 1.25rem;
+        }
+
+        .event-date {
+          font-size: 1.75rem;
+        }
+
+        .event-timing {
+          font-size: 1.25rem;
+        }
+      }
+    }
+
+    .event-venue {
+      .styled-heading {
+        font-size: 1.25rem;
+      }
+
+      .venue-details {
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin: 1.5rem 0;
+      }
+
+      .venue-direction {
+        font-size: 1.125rem;
+        padding: 0.75rem 2rem;
+      }
+    }
+  }
+
+  .youtube-title {
+    font-size: 2rem;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+  }
+
+  .footer {
+    padding: 6rem 0;
+    .credits {
+      font-size: 1.5rem;
+
+      span {
+        a {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .share-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      li + li {
+        margin-top: 0;
+        margin-left: 1.5rem;
+      }
+
+      a {
+        position: relative;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transition: background-color 150ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+        &.facebook:hover {
+          background-color: #2d4473;
+        }
+
+        &.twitter:hover {
+          background-color: #0b7bc0;
+        }
+
+        &.whatsapp:hover {
+          background-color: #0a5048;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
   }
 }
