@@ -208,7 +208,7 @@ body {
 
   .events-wrapper {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     padding: 1rem 0;
 
@@ -857,42 +857,8 @@ body {
     }
   }
 
-  .share-buttons {
-    margin-top: 2.5rem;
-
-    li + li {
-      margin-top: 0.75rem;
-    }
-
-    a {
-      --width: 250px;
-      display: flex;
-      padding: 0.5rem 2rem;
-      border-radius: 3px;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      width: var(--width);
-      margin: 0 auto;
-
-      &.facebook {
-        background-color: #3b5998;
-      }
-
-      &.twitter {
-        background-color: #1da1f2;
-      }
-
-      &.whatsapp {
-        background-color: #128c7e;
-      }
-
-      svg {
-        display: inline-block;
-        margin-right: 0.75rem;
-        fill: #fff;
-      }
-    }
+  .share-buttons-wrapper {
+    margin: 4rem 0;
   }
 }
 
